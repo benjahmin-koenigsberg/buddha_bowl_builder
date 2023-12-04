@@ -1,24 +1,42 @@
-/** @format */
+import Button from 'react-bootstrap/Button'
 
-function FoodItem({item}) {
-console.log(item.foods)
+function FoodItem({food, setModalContent, bowl, setBowl, modalContent }) {
+
   return (
-    <div className="">
-      <h2>Choose your {item.category}</h2>
+    <>
       <form className="d-flex flex-row justify-content-evenly">
-        {item.foods.map((food) => (
-          <>
+        <div>
+          <div className="form-check">
+            <label className="form-check-label" htmlFor={food.name}>
+              {food.name}
+            </label>
             <input
+              className="form-checkk-input"
               type="radio"
               id={food.name}
               name={food.name}
               value={food.name}
+              checked={bowl[`${food.category}`] === food.name}
+              onChange={(e) => {
+                setBowl({
+                  ...bowl,
+                  [`${food.category}`]: e.target.value,
+                });
+                setModalContent({
+                  name: food.name,
+                  text: food.modalText,
+                  img: food.modalImg,
+                });
+              }}
             />
-             <label htmlFor={food.name}>{food.name} </label>
-          </>
-        ))}
+            <Button variant="primary" onClick={handleShow}>
+              Launch demo modal
+            </Button>
+          </div>
+        </div>
       </form>
-    </div>
+      <ModalComponent show={show} handleClose={handleClose} modalContent={modalContent} />
+    </>
   );
 }
 export default FoodItem;

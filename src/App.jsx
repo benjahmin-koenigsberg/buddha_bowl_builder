@@ -1,23 +1,39 @@
-import { useState } from 'react'
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css'
-import {data} from './assets/data'
-import FoodItem from './components/FoodItem';
+import "./App.css";
+import { greens, grains } from "./assets/data";
+import Header from './components/Header'
+import Card from './components/Card'
 
 function App() {
 
-  // const Spinach = data.filter(item=>item.name === 'Spinach')
+  const [bowl, setBowl] = useState({
+    greens: "",
+    grains: "",
+    calories: "",
+    carbs: "",
+    fats: "",
+    protein: "",
+  });
+
+
 
   return (
-    <>
-      <h1 className="display-5">Buddah Bowl Builder</h1>
-      <ul>
-        {data.map((item, index) => (
-          <FoodItem key={index}  item={item} />
-        ))}
-      </ul>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route
+          path="/greens"
+          element={<Card foods={greens} bowl={bowl} setBowl={setBowl} />}
+        />
+        <Route
+          path="/grains"
+          element={<Card foods={grains} bowl={bowl} setBowl={setBowl} />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App
+export default App;
