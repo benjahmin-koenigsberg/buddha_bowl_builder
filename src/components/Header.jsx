@@ -1,4 +1,8 @@
 function Header() {
-  return <h1 className="display-5">Buddah Bowl Builder</h1>;
+  return (
+    <header>
+      <h1 className="display-5">Buddah Bowl Builder</h1>
+    </header>
+  );
 }
 export default Header

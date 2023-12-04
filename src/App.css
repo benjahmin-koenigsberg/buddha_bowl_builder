@@ -1,5 +1,21 @@
 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+header {
+  height: 20vh;
+}
+.main {
+  height: 70vh;
+}
+
+footer {
+  height: 10vh;
+}
 
 #root {
   max-width: 1280px;
