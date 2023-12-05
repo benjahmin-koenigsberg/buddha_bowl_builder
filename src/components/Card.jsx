@@ -1,24 +1,24 @@
+/** @format */
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalComponent from "./ModalComponent";
 import Button from "react-bootstrap/Button";
 
-function Card({ foods, bowl, setBowl }) {
-
-const navigate = useNavigate()
+function Card({ foods, bowl, setBowl, setProgress }) {
+  const navigate = useNavigate();
 
   const [show, setShow] = useState(false);
 
   const [modalContent, setModalContent] = useState({
-    name: "" ,
-    text: "" ,
+    name: "",
+    text: "",
     img: "",
-    calories: '',
-    carbs: '',
-    fat: '',
-    protein: '',
-}
-    );
+    calories: "",
+    carbs: "",
+    fat: "",
+    protein: "",
+  });
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -33,7 +33,7 @@ const navigate = useNavigate()
           <form className="d-flex flex-row justify-content-evenly">
             {foods.map((food) => (
               <div>
-                <div className="form-check d-flex flex-row justify-content-evenly align-items-center gap-2">
+                <div className="form-check d-flex flex-row justify-content-evenly align-items-center gap-2 flex-wrap">
                   <label className="form-check-label" htmlFor={food.name}>
                     {food.name}
                   </label>
@@ -58,12 +58,16 @@ const navigate = useNavigate()
                         fat: food.fat,
                         protien: food.protein,
                       });
+                      setProgress(foods[0].progress);
+                    // setProgress((prev)=>prev+12.5)
                     }}
                   />
                   <div
                     className="text-center"
                     type="button"
-                    onClick={() => handleShow()}>
+                    onClick={() => {
+                      bowl[food.category] ? handleShow() : "";
+                    }}>
                     ℹ️
                   </div>
                 </div>
@@ -76,19 +80,24 @@ const navigate = useNavigate()
         </div>
       </div>
       <ModalComponent
-        show={show}
         modalContent={modalContent}
+        show={show}
         handleClose={handleClose}
       />
       <div className="d-flex flex-row justify-content-between">
         <button
           class="btn btn-primary mt-5"
-          onClick={() => navigate(foods[0].navBack)}>
+          onClick={() => {
+           setProgress((prev) => prev - 12.5)
+            navigate(foods[0].navBack);
+          }}>
           ◀️ Back
         </button>
         <button
           class="btn btn-primary mt-5"
-          onClick={() => navigate(foods[0].navTo)}>
+          onClick={() => {
+            navigate(foods[0].navTo);
+          }}>
           {foods[0].navTo.slice(1)} ▶️
         </button>
       </div>

@@ -13,6 +13,7 @@ const greens = [
         bowlImg: '',
         navTo: '/grains',
         navBack: '/',
+        progress: 12.5,
     },
     {
         name: 'Mixed Greens',
@@ -55,6 +56,8 @@ const grains = [
         bowlImg: '',
         navTo: '/beans',
         navBack: '/greens',
+        progress: 25,
+
     },
     {
         name: 'Brown Rice',
@@ -95,6 +98,7 @@ const beans = [
         bowlImg: '',
         navTo: '/roots',
         navBack: '/grains',
+        progress: 37.5,
     },
     {
         name: 'Garbanzo beans',
@@ -124,7 +128,7 @@ const beans = [
 const roots =[
     {
         mainText: '',
-        name: 'Yams | Sweet Potato',
+        name: 'Yams',
         category: 'roots',
         calories: '',
         carbs: '',
@@ -135,6 +139,8 @@ const roots =[
         bowlImg: '',
         navTo: '/fats',
         navBack: '/beans',
+        progress: 50,
+
     },
     {
         name: 'Beets',
@@ -176,7 +182,9 @@ const fats = [
         modalText: "An avocado is a bright green fruit with a large pit and dark leathery skin. It's also known as alligator pear or butter fruit.Avocados are a favorite of the produce section",
         bowlImg: '',
         navTo: '/dressing',
-        navBack: '/roots'
+        navBack: '/roots',
+        progress: '62.5',
+
     },
     {
         name: 'Walnuts',
@@ -202,5 +210,6 @@ const fats = [
     },
 ]
 
+const dressings = []
 
-export { greens, grains, beans, roots, fats }
+export { greens, grains, beans, roots, fats, dressings }

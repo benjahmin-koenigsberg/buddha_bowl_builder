@@ -1,21 +1,4 @@
 
-body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-header {
-  height: 20vh;
-}
-.main {
-  height: 70vh;
-}
-
-footer {
-  height: 10vh;
-}
 
 #root {
   max-width: 1280px;
@@ -23,3 +6,32 @@ footer {
   padding: 2rem;
   text-align: center;
 }
+
+
+html , body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(var(--vh, 1vh) * 100);
+  font-size: calc(60% + 1.2vmin);
+
+}
+
+/* header {
+  height: 10vh;
+} */
+/* .main {
+  height: 70vh;
+} */
+
+.main {
+  /* width: 50vw; */
+  height: 70vh;
+  height: calc(var(--vh, 1vh) * 70);
+
+}
+
+/* footer {
+  height: 5vh;
+} */
