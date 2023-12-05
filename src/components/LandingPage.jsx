@@ -24,12 +24,12 @@ function LandingPage({setProgress}) {
           In general, there are five basic elements to a buddha bowl
         </p>
         <div className="text-center w-50 m-auto">
-          <ul class="list-group">
-            <li class="list-group-item">Greens</li>
-            <li class="list-group-item">Whole grains</li>
-            <li class="list-group-item">Beans</li>
-            <li class="list-group-item">Vegetable</li>
-            <li class="list-group-item">Dressings</li>
+          <ul className="list-group">
+            <li className="list-group-item">Greens</li>
+            <li className="list-group-item">Whole grains</li>
+            <li clasName="list-group-item">Beans</li>
+            <li className="list-group-item">Vegetable</li>
+            <li className="list-group-item">Dressings</li>
           </ul>
         </div>
         <br></br>

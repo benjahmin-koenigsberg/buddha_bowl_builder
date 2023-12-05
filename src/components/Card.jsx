@@ -25,14 +25,14 @@ function Card({ foods, bowl, setBowl, setProgress }) {
 
   return (
     <>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">{`Choose your ${foods[0].category}`}</h5>
-          <p class="card-text">Some quick example text</p>
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">{`Choose your ${foods[0].category}`}</h5>
+          <p className="card-text">Some quick example text</p>
 
           <form className="d-flex flex-row justify-content-evenly">
-            {foods.map((food) => (
-              <div>
+            {foods.map((food, index) => (
+              <div key={index}>
                 <div className="form-check d-flex flex-row justify-content-evenly align-items-center gap-2 flex-wrap">
                   <label className="form-check-label" htmlFor={food.name}>
                     {food.name}
@@ -59,7 +59,7 @@ function Card({ foods, bowl, setBowl, setProgress }) {
                         protien: food.protein,
                       });
                       setProgress(foods[0].progress);
-                    // setProgress((prev)=>prev+12.5)
+                      // setProgress((prev)=>prev+12.5)
                     }}
                   />
                   <div
@@ -74,33 +74,32 @@ function Card({ foods, bowl, setBowl, setProgress }) {
               </div>
             ))}
           </form>
-          {/* <button  class="btn btn-primary mt-5" onClick={ () => navigate( foods[0].navTo) } >
-            {foods[0].navTo.slice(1)} ▶️
-          </button> */}
+
         </div>
+      </div>
+      <div className="d-flex flex-row justify-content-between">
+        <button
+          className="btn btn-primary mt-5"
+          onClick={() => {
+            setProgress((prev) => prev - 12.5);
+            navigate(foods[0].navBack);
+          }}>
+          ◀️ Back
+        </button>
+        <button
+          className="btn btn-primary mt-5"
+          onClick={() => {
+            bowl[foods[0].category] ?  navigate(foods[0].navTo) : "";
+            // navigate(foods[0].navTo);
+          }}>
+          {foods[0].navTo.slice(1)} ▶️
+        </button>
       </div>
       <ModalComponent
         modalContent={modalContent}
         show={show}
         handleClose={handleClose}
       />
-      <div className="d-flex flex-row justify-content-between">
-        <button
-          class="btn btn-primary mt-5"
-          onClick={() => {
-           setProgress((prev) => prev - 12.5)
-            navigate(foods[0].navBack);
-          }}>
-          ◀️ Back
-        </button>
-        <button
-          class="btn btn-primary mt-5"
-          onClick={() => {
-            navigate(foods[0].navTo);
-          }}>
-          {foods[0].navTo.slice(1)} ▶️
-        </button>
-      </div>
     </>
   );
 }

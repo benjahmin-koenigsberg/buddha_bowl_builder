@@ -1,6 +1,6 @@
 function Table({modalContent}) {
   return (
-    <table class="table text-center">
+    <table className="table text-center">
       <thead>
         <tr>
           <th scope="col">Calories</th>
