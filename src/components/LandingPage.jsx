@@ -2,7 +2,7 @@
 
 import { useNavigate } from "react-router-dom";
 
-function LandingPage({setProgress}) {
+function LandingPage({ setProgress }) {
   const navigate = useNavigate();
 
   return (
@@ -27,7 +27,7 @@ function LandingPage({setProgress}) {
           <ul className="list-group">
             <li className="list-group-item">Greens</li>
             <li className="list-group-item">Whole grains</li>
-            <li clasName="list-group-item">Beans</li>
+            <li className="list-group-item">Beans</li>
             <li className="list-group-item">Vegetable</li>
             <li className="list-group-item">Dressings</li>
           </ul>
@@ -36,7 +36,7 @@ function LandingPage({setProgress}) {
         <button
           className="btn btn-dark"
           onClick={() => {
-            setProgress((prev)=>prev+12.5)
+            setProgress((prev) => prev + 12.5);
             navigate("/greens");
           }}>
           Next ▶️

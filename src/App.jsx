@@ -23,7 +23,7 @@ const [progress, setProgress] = useState(0);
 useEffect(()=>{},[progress])
 
 
-  const [bowl, setBowl] = useState({
+  const [ bowl, setBowl] = useState({
     greens: "",
     grains: "",
     beans: "",
