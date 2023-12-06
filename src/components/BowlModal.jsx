@@ -25,7 +25,7 @@ const handleCapture = async () => {
         </Modal.Header>
         <Modal.Body className="text-center"></Modal.Body>
         <div className="parent m-auto" id="bowlImg">
-          <img src={bowlImages.Bowl} className="z-0" />
+          <img src={bowlImages.Bowl} className="" />
           <img className="food" src={bowlImages[bowl.greens]} />
           <img className="food" src={bowlImages[bowl.grains]} />
           <img className="food black-beans" src={bowlImages[bowl.beans]} />

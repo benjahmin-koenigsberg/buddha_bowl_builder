@@ -21,7 +21,6 @@ useEffect(()=>{
   setBowl({...bowl, progress: 100})
 }, [])
 
-console.log(bowlImages)
 
   return (
     <>
