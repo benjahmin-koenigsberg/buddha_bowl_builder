@@ -356,6 +356,18 @@ const foods = [
         path: '/roots',
         choices: [
             {
+                name: 'Beet',
+                category: 'roots',
+                calories: '',
+                carbs: '',
+                fat: '',
+                protein: '',
+                modalImg: 'https://i5.walmartimages.com/seo/Bull-s-Blood-Beet-Seeds-100-Heirloom-Seeds-Per-Packet-Non-GMO-USA-Homegrown-Seeds_6b32a385-d5aa-470c-aa26-2e9ca57b23ec.9f2c5c0411794a08f92a98de767c4bf4.jpeg',
+                modalText: "What makes beets such gems? It turns out that the same thing that makes these root vegetables so colorful also gives you plenty of nutrients. Beets get their jewel-like hue from betalains, a type of natural plant pigment that has antioxidant and anti-inflammatory properties.",
+                bowlImg: './images/beet.png',
+
+            },
+            {
                 path: '/roots',
                 mainText: '',
                 name: 'Yams',
@@ -372,18 +384,7 @@ const foods = [
                 progress: 50,
 
             },
-            {
-                name: 'Beet',
-                category: 'roots',
-                calories: '',
-                carbs: '',
-                fat: '',
-                protein: '',
-                modalImg: 'https://i5.walmartimages.com/seo/Bull-s-Blood-Beet-Seeds-100-Heirloom-Seeds-Per-Packet-Non-GMO-USA-Homegrown-Seeds_6b32a385-d5aa-470c-aa26-2e9ca57b23ec.9f2c5c0411794a08f92a98de767c4bf4.jpeg',
-                modalText: "What makes beets such gems? It turns out that the same thing that makes these root vegetables so colorful also gives you plenty of nutrients. Beets get their jewel-like hue from betalains, a type of natural plant pigment that has antioxidant and anti-inflammatory properties.",
-                bowlImg: './images/beet.png',
 
-            },
             {
                 name: 'Carrots',
                 category: 'roots',
