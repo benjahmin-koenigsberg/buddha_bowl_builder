@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Table from "./Table";
 import BowlModal from "./BowlModal";
+import { bowlImages } from "../assets/data";
 
 
 function BowlPage({
@@ -20,6 +21,8 @@ useEffect(()=>{
   setBowl({...bowl, progress: 100})
 }, [])
 
+console.log(bowlImages)
+
   return (
     <>
       <div className="card">
@@ -28,26 +31,26 @@ useEffect(()=>{
         {/* <img className={`img-fluid`} src={"./src/assets/images/bowl.png"} /> */}
         <div className="card-body">
           <div className="parent">
-            <img src={"./src/assets/images/bowl.png"} />
+            <img src={bowlImages.Bowl} className="z-0" />
             <img
               className="food"
-              src={`./src/assets/images/${bowl?.greens}.png`}
+              src={bowlImages[bowl.greens]}
             />
             <img
               className="food"
-              src={`./src/assets/images/${bowl?.grains}.png`}
+              src={bowlImages[bowl.grains]}
             />
             <img
               className="food black-beans"
-              src={`./src/assets/images/${bowl?.beans}.png`}
+              src={bowlImages[bowl.beans]}
             />
             <img
               className="food"
-              src={`./src/assets/images/${bowl?.roots}.png`}
+              src={bowlImages[bowl.roots]}
             />
             <img
               className="food"
-              src={`./src/assets/images/${bowl?.toppings}.png`}
+              src={bowlImages[bowl.toppings]}
             />
           </div>
           <p className="card-text"></p>

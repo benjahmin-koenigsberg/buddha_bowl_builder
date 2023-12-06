@@ -465,4 +465,16 @@ const foods = [
 
 ]
 
-export {  foods }
+const bowlImages = {
+    Bowl: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894263/bowl_clavpl.png',
+    Spinach: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894264/Spinach_cedtt2.png',
+    Quinoa: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894264/Quinoa_serq0m.png',
+    "Black beans": 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894263/Black_beans_ihmjvs.png',
+    Beet: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894263/Beet_uczzwu.png',
+    Avacado: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894263/Avacado_o0rdds.png'
+
+
+
+}
+
+export {  foods, bowlImages }
