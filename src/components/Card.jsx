@@ -5,8 +5,19 @@ import { useNavigate } from "react-router-dom";
 import ModalComponent from "./ModalComponent";
 import Button from "react-bootstrap/Button";
 
-function Card({ foods, bowl, setBowl, setProgress, progress, modalContent, setModalContent, show, setShow, handleClose, handleShow }) {
-
+function Card({
+  foods,
+  bowl,
+  setBowl,
+  setProgress,
+  progress,
+  modalContent,
+  setModalContent,
+  show,
+  setShow,
+  handleClose,
+  handleShow,
+}) {
   const navigate = useNavigate();
 
   // const handleClose = () => setShow(false);
@@ -38,9 +49,16 @@ function Card({ foods, bowl, setBowl, setProgress, progress, modalContent, setMo
                       setBowl({
                         ...bowl,
                         [`${food.category}`]: e.target.value,
-                        [bowl.calories] : bowl.calories+=food.calories
+                        // calories: bowl.calories + food.calories,
+                        // carbs: bowl.carbs + food.carbs,
+                        // fat: bowl.fat + food.fat,
+                        // protein: bowl.protein + food.protein,
+                        progress: foods[0].progress
+
                       });
-                         localStorage.setItem("bowl", JSON.stringify(bowl));
+
+                      localStorage.setItem("bowl", JSON.stringify(bowl));
+
                       setModalContent({
                         name: food.name,
                         text: food.modalText,
@@ -50,9 +68,14 @@ function Card({ foods, bowl, setBowl, setProgress, progress, modalContent, setMo
                         fat: food.fat,
                         protien: food.protein,
                       });
-                      setProgress(foods[0].progress);
-                       localStorage.setItem("progress", JSON.stringify(progress));
-                     // setProgress((prev)=>prev+12.5)
+
+                      // setProgress(foods[0].progress);
+
+                      // localStorage.setItem(
+                      //   "progress",
+                      //   JSON.stringify(progress)
+                      // );
+                      // setProgress((prev)=>prev+12.5)
                     }}
                   />
                   <div
@@ -73,7 +96,9 @@ function Card({ foods, bowl, setBowl, setProgress, progress, modalContent, setMo
         <button
           className="btn btn-primary mt-5"
           onClick={() => {
-            setProgress((prev) => prev - 12.5);
+            // setProgress((prev) => prev - 12.5);
+            setBowl({...bowl,
+            progress: foods[0].progress})
             // navigate(foods[0].navBack);
             history.back();
           }}>

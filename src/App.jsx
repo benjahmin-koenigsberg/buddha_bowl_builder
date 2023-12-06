@@ -1,3 +1,5 @@
+/** @format */
+
 import "./App.css";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
@@ -23,10 +25,9 @@ function App() {
 
   //
 
-
   //state
 
-  const [progress, setProgress] = useState(0);
+  // const [progress, setProgress] = useState(0);
 
   const [bowl, setBowl] = useState({
     greens: "",
@@ -35,10 +36,11 @@ function App() {
     roots: "",
     toppings: "",
     dressing: "",
-    calories: "",
-    carbs: "",
-    fat: "",
-    protein: "",
+    calories: 0,
+    carbs: 0,
+    fat: 0,
+    protein: 0,
+    progress: 0,
   });
 
   const [modalContent, setModalContent] = useState({
@@ -53,15 +55,21 @@ function App() {
 
   const [show, setShow] = useState(false);
 
-     const handleClose = () => setShow(false);
-     const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <BrowserRouter>
-      <Header progress={progress} />
+      {/* <Header progress={progress}  /> */}
+      <Header progress={bowl.progress} />
+
       <div className="main container">
         <Routes>
-          <Route path="/" element={<LandingPage setProgress={setProgress} />} />
+          {/* <Route path="/" element={<LandingPage setProgress={setProgress} />} /> */}
+          <Route
+            path="/"
+            element={<LandingPage setBowl={setBowl} bowl={bowl} />}
+          />
 
           {foods.map((foods, i) => (
             <Route
@@ -73,8 +81,8 @@ function App() {
                   foods={foods.choices}
                   bowl={bowl}
                   setBowl={setBowl}
-                  progress={progress}
-                  setProgress={setProgress}
+                  // progress={progress}
+                  // setProgress={setProgress}
                   modalContent={modalContent}
                   setModalContent={setModalContent}
                   show={show}
@@ -91,7 +99,7 @@ function App() {
               <BowlPage
                 bowl={bowl}
                 setBowl={setBowl}
-                setProgress={setProgress}
+                // setProgress={setProgress}
                 modalContent={modalContent}
                 setModalContent={setModalContent}
                 show={show}

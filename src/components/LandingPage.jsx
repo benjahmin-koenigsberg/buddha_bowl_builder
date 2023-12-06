@@ -2,7 +2,7 @@
 
 import { useNavigate } from "react-router-dom";
 
-function LandingPage({ setProgress }) {
+function LandingPage({ setBowl, bowl }) {
   const navigate = useNavigate();
 
   return (
@@ -37,7 +37,13 @@ function LandingPage({ setProgress }) {
         <button
           className="btn btn-dark"
           onClick={() => {
-            setProgress((prev) => prev + 12.5);
+            // setProgress((prev) => prev + 12.5);
+            setBowl({
+              ...bowl,
+              progress: bowl.progress + 12.5
+            })
+            // setBowl(( prev ) => prev.calories + 12.5)
+
             navigate("/greens");
           }}>
           Next ▶️
