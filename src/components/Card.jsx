@@ -54,7 +54,6 @@ function Card({
                         // fat: bowl.fat + food.fat,
                         // protein: bowl.protein + food.protein,
                         progress: foods[0].progress
-
                       });
 
                       localStorage.setItem("bowl", JSON.stringify(bowl));

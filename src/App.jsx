@@ -58,6 +58,8 @@ function App() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  useEffect(()=>{},[window.location.pathname])
+
   return (
     <BrowserRouter>
       {/* <Header progress={progress}  /> */}
