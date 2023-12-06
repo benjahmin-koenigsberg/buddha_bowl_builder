@@ -64,6 +64,7 @@ console.log(bowlImages)
         handleClose={handleClose}
         modalContent={modalContent}
         bowl={bowl}
+        bowlImages={bowlImages}
       />
     </>
   );

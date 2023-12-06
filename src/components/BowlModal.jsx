@@ -6,7 +6,7 @@ import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
 
 
-function BowlModal({ show, handleClose, modalContent, bowl }) {
+function BowlModal({ show, handleClose, modalContent, bowl, bowlImages }) {
 
 
 const handleCapture = async () => {
