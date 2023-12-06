@@ -365,6 +365,9 @@ const foods = [
                 modalImg: 'https://i5.walmartimages.com/seo/Bull-s-Blood-Beet-Seeds-100-Heirloom-Seeds-Per-Packet-Non-GMO-USA-Homegrown-Seeds_6b32a385-d5aa-470c-aa26-2e9ca57b23ec.9f2c5c0411794a08f92a98de767c4bf4.jpeg',
                 modalText: "What makes beets such gems? It turns out that the same thing that makes these root vegetables so colorful also gives you plenty of nutrients. Beets get their jewel-like hue from betalains, a type of natural plant pigment that has antioxidant and anti-inflammatory properties.",
                 bowlImg: './images/beet.png',
+                navTo: '/dressing',
+                navBack: '/beans',
+                progress: 50,
 
             },
             {
@@ -379,12 +382,9 @@ const foods = [
                 modalImg: 'https://m.media-amazon.com/images/I/41ZVUCn0RoL._SY300_SX300_QL70_FMwebp_.jpg',
                 modalText: "Sweet and starchy, they're delicious roasted or boiled and mashed. Sweet potatoes are a good source of beta carotene, vitamin A, B-complex vitamins, vitamin C and manganese. Grown by local farms who utilize sustainable growing practices.",
                 bowlImg: '',
-                navTo: '/dressing',
-                navBack: '/beans',
-                progress: 50,
+
 
             },
-
             {
                 name: 'Carrots',
                 category: 'roots',
