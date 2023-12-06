@@ -8,6 +8,7 @@
 }
 
 
+
 html , body {
   height: 100vh;
   display: flex;
@@ -15,8 +16,12 @@ html , body {
   justify-content: space-between;
   height: calc(var(--vh, 1vh) * 100);
   font-size: calc(60% + 1.2vmin);
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
+
 
 /* header {
   height: 10vh;
@@ -35,3 +40,46 @@ html , body {
 /* footer {
   height: 5vh;
 } */
+
+/* .all-bg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+
+
+.greens {
+  background-image: url('https://images.pexels.com/photos/319798/pexels-photo-319798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.grains {
+  background-image: url("https://images.pexels.com/photos/4110250/pexels-photo-4110250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.beans {
+  background-image: url('https://www.eatthis.com/wp-content/uploads/sites/4/2020/03/variety-of-beans.jpg?quality=82&strip=1')
+}
+
+
+
+.parent{
+  position: relative;
+
+}
+
+img {
+  width: 20rem;
+}
+
+
+.food {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.black-beans {
+  width: 8rem;
+  left: 5.5rem;
+  bottom: 2rem;
+}

@@ -28,8 +28,9 @@ function LandingPage({ setProgress }) {
             <li className="list-group-item">Greens</li>
             <li className="list-group-item">Whole grains</li>
             <li className="list-group-item">Beans</li>
-            <li className="list-group-item">Vegetable</li>
+            <li className="list-group-item">Vegetables</li>
             <li className="list-group-item">Dressings</li>
+            <li className="list-group-item">Toppings</li>
           </ul>
         </div>
         <br></br>

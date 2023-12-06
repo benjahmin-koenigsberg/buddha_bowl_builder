@@ -1,99 +1,102 @@
-import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { greens, grains, beans, roots, fats } from "./assets/data";
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { foods } from "./assets/data";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Card from "./components/Card";
 import LandingPage from "./components/LandingPage";
+import BowlPage from "./components/BowlPage";
 
 function App() {
-
-
-    const resizeOps = () => {
-    document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+  //functions
+  const resizeOps = () => {
+    document.documentElement.style.setProperty(
+      "--vh",
+      window.innerHeight * 0.01 + "px"
+    );
   };
 
   resizeOps();
+
   window.addEventListener("resize", resizeOps);
 
-const [progress, setProgress] = useState(0);
-
-useEffect(()=>{},[progress])
+  //
 
 
-  const [ bowl, setBowl] = useState({
+  //state
+
+  const [progress, setProgress] = useState(0);
+
+  const [bowl, setBowl] = useState({
     greens: "",
     grains: "",
     beans: "",
     roots: "",
-    fats: "",
-    dressings: '',
+    toppings: "",
+    dressing: "",
     calories: "",
     carbs: "",
-    fat: '',
+    fat: "",
     protein: "",
   });
+
+  const [modalContent, setModalContent] = useState({
+    name: "",
+    text: "",
+    img: "",
+    calories: "",
+    carbs: "",
+    fat: "",
+    protein: "",
+  });
+
+  const [show, setShow] = useState(false);
+
+     const handleClose = () => setShow(false);
+     const handleShow = () => setShow(true);
 
   return (
     <BrowserRouter>
       <Header progress={progress} />
       <div className="main container">
         <Routes>
-          <Route  path="/" element={<LandingPage  setProgress={setProgress} />} />
+          <Route path="/" element={<LandingPage setProgress={setProgress} />} />
+
+          {foods.map((foods, i) => (
+            <Route
+              key={i}
+              // path={`/${i}`}
+              path={`${foods.path}`}
+              element={
+                <Card
+                  foods={foods.choices}
+                  bowl={bowl}
+                  setBowl={setBowl}
+                  progress={progress}
+                  setProgress={setProgress}
+                  modalContent={modalContent}
+                  setModalContent={setModalContent}
+                  show={show}
+                  setShow={setShow}
+                  handleClose={handleClose}
+                  handleShow={handleShow}
+                />
+              }
+            />
+          ))}
           <Route
-            path="/greens"
+            path="/bowl"
             element={
-              <Card
-                foods={greens}
+              <BowlPage
                 bowl={bowl}
                 setBowl={setBowl}
                 setProgress={setProgress}
-              />
-            }
-          />
-          <Route
-            path="/grains"
-            element={
-              <Card
-                foods={grains}
-                bowl={bowl}
-                setBowl={setBowl}
-                setProgress={setProgress}
-              />
-            }
-          />
-          <Route
-            path="/beans"
-            element={
-              <Card
-                foods={beans}
-                bowl={bowl}
-                setBowl={setBowl}
-                setProgress={setProgress}
-              />
-            }
-          />
-          <Route
-            path="/roots"
-            element={
-              <Card
-                foods={roots}
-                bowl={bowl}
-                setBowl={setBowl}
-                setProgress={setProgress}
-              />
-            }
-          />
-          <Route
-            path="/fats"
-            element={
-              <Card
-                foods={fats}
-                bowl={bowl}
-                setBowl={setBowl}
-                setProgress={setProgress}
+                modalContent={modalContent}
+                setModalContent={setModalContent}
+                show={show}
+                handleClose={handleClose}
+                handleShow={handleShow}
               />
             }
           />
