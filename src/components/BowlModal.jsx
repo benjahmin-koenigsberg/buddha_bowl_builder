@@ -25,27 +25,12 @@ const handleCapture = async () => {
         </Modal.Header>
         <Modal.Body className="text-center"></Modal.Body>
         <div className="parent m-auto" id="bowlImg">
-          <img src={"./src/assets/images/bowl.png"} />
-          <img
-            className="food"
-            src={`./src/assets/images/${bowl?.greens}.png`}
-          />
-          <img
-            className="food"
-            src={`./src/assets/images/${bowl?.grains}.png`}
-          />
-          <img
-            className="food black-beans"
-            src={`./src/assets/images/${bowl?.beans}.png`}
-          />
-          <img
-            className="food"
-            src={`./src/assets/images/${bowl?.roots}.png`}
-          />
-          <img
-            className="food"
-            src={`./src/assets/images/${bowl?.toppings}.png`}
-          />
+          <img src={bowlImages.Bowl} className="z-0" />
+          <img className="food" src={bowlImages[bowl.greens]} />
+          <img className="food" src={bowlImages[bowl.grains]} />
+          <img className="food black-beans" src={bowlImages[bowl.beans]} />
+          <img className="food" src={bowlImages[bowl.roots]} />
+          <img className="food" src={bowlImages[bowl.toppings]} />
         </div>
         <Modal.Footer className="m-auto">
           <Button variant="secondary" onClick={() => handleClose()}>
