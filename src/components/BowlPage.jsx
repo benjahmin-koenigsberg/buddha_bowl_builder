@@ -16,8 +16,9 @@ function BowlPage({
   handleClose,
 }) {
 
-
-
+useEffect(()=>{
+  setBowl({...bowl, progress: 100})
+}, [])
 
   return (
     <>

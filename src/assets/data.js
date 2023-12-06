@@ -231,7 +231,7 @@ const foods = [
                 modalText: 'Spinach is yummy',
                 bowlImg: './images/spinach.png',
                 navTo: '/grains',
-                navBack: '',
+                navBack: '/landing',
                 progress: 12.5,
             },
             {

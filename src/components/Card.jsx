@@ -69,13 +69,6 @@ function Card({
                         protien: food.protein,
                       });
 
-                      // setProgress(foods[0].progress);
-
-                      // localStorage.setItem(
-                      //   "progress",
-                      //   JSON.stringify(progress)
-                      // );
-                      // setProgress((prev)=>prev+12.5)
                     }}
                   />
                   <div
@@ -97,10 +90,10 @@ function Card({
           className="btn btn-primary mt-5"
           onClick={() => {
             // setProgress((prev) => prev - 12.5);
-            setBowl({...bowl,
-            progress: foods[0].progress})
-            // navigate(foods[0].navBack);
-            history.back();
+            // setBowl({...bowl,
+            setBowl({ ...bowl, progress: bowl.progress - 12.5 });
+            navigate(foods[0].navBack)
+            // history.back();
           }}>
           ◀️ Back
         </button>
