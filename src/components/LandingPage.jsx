@@ -17,10 +17,10 @@ function LandingPage({ setBowl, bowl }) {
           plate, consists of small portions of several foods arranged in
           an "artful" way.
         </p>
-        <p className="card-text">
+        {/* <p className="card-text">
           The concept appeared in 2013 Juice for Life, now Fresh, in Toronto,
           Ontario, started offering these on their menu prior to 2013.
-        </p>
+        </p> */}
         <p className="card-text">
           In general, there are 5 basic elements to a buddha bowl
         </p>
