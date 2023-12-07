@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import ModalComponent from "./ModalComponent";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Table from "./Table";
+
 import BowlModal from "./BowlModal";
 import { bowlImages } from "../assets/data";
 
@@ -31,26 +31,12 @@ useEffect(()=>{
         <div className="card-body">
           <div className="parent">
             <img src={bowlImages.Bowl} className="z-0" />
-            <img
-              className="food"
-              src={bowlImages[bowl.greens]}
-            />
-            <img
-              className="food"
-              src={bowlImages[bowl.grains]}
-            />
-            <img
-              className="food black-beans"
-              src={bowlImages[bowl.beans]}
-            />
-            <img
-              className="food"
-              src={bowlImages[bowl.roots]}
-            />
-            <img
-              className="food"
-              src={bowlImages[bowl.toppings]}
-            />
+            <img className="food" src={bowlImages[bowl.greens]} />
+            <img className="food" src={bowlImages[bowl.grains]} />
+            <img className="food" src={bowlImages[bowl.beans]} />
+            <img className="food" src={bowlImages[bowl.roots]} />
+            <img className="food" src={bowlImages[bowl.toppings]} />
+            <img className="food" src={bowlImages[bowl.dressing]} />
           </div>
           <p className="card-text"></p>
           <button className="btn btn-primary" onClick={handleShow}>

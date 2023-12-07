@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 import ModalComponent from "./ModalComponent";
 import Button from "react-bootstrap/Button";
 
+
 function Card({
   foods,
   bowl,
   setBowl,
-  setProgress,
-  progress,
+
   modalContent,
   setModalContent,
   show,
@@ -20,8 +20,6 @@ function Card({
 }) {
   const navigate = useNavigate();
 
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
 
   return (
     <>
@@ -53,10 +51,10 @@ function Card({
                         // carbs: bowl.carbs + food.carbs,
                         // fat: bowl.fat + food.fat,
                         // protein: bowl.protein + food.protein,
-                        progress: foods[0].progress
+                        progress: foods[0].progress,
                       });
 
-                      localStorage.setItem("bowl", JSON.stringify(bowl));
+                      //localStorage.setItem("bowl", JSON.stringify(bowl));
 
                       setModalContent({
                         name: food.name,
@@ -67,7 +65,6 @@ function Card({
                         fat: food.fat,
                         protien: food.protein,
                       });
-
                     }}
                   />
                   <div
@@ -91,7 +88,7 @@ function Card({
             // setProgress((prev) => prev - 12.5);
             // setBowl({...bowl,
             setBowl({ ...bowl, progress: bowl.progress - 12.5 });
-            navigate(foods[0].navBack)
+            navigate(foods[0].navBack);
             // history.back();
           }}>
           ◀️ Back

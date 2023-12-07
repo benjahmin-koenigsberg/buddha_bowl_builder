@@ -19,9 +19,8 @@ function LandingPage({ setBowl, bowl }) {
           The concept appeared in 2013 Juice for Life, now Fresh, in Toronto,
           Ontario, was offering this on their menu prior to 2013.
         </p>
-        <br></br>
         <p className="card-text">
-          In general, there are five basic elements to a buddha bowl
+          In general, there are 5 basic elements to a buddha bowl
         </p>
         <div className="text-center w-50 m-auto">
           <ul className="list-group">

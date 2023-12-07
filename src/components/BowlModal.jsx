@@ -33,8 +33,9 @@ const handleCapture = async () => {
           <img className="food black-beans" src={bowlImages[bowl.beans]} />
           <img className="food" src={bowlImages[bowl.roots]} />
           <img className="food" src={bowlImages[bowl.toppings]} />
+          <img className="food" src={bowlImages[bowl.dressing]} />
         </div>
-      <BowlTable  bowl={bowl} />
+        <BowlTable bowl={bowl} />
 
         <Modal.Footer className="m-auto">
           <Button variant="secondary" onClick={() => handleClose()}>

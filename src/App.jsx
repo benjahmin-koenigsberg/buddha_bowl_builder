@@ -23,11 +23,8 @@ function App() {
 
   window.addEventListener("resize", resizeOps);
 
-  //
-
-  //state
-
-  // const [progress, setProgress] = useState(0);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
   const [bowl, setBowl] = useState({
     greens: "",
@@ -55,8 +52,7 @@ function App() {
 
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+
 
   useEffect(()=>{},[window.location.pathname])
 
@@ -76,15 +72,12 @@ function App() {
           {foods.map((foods, i) => (
             <Route
               key={i}
-              // path={`/${i}`}
               path={`${foods.path}`}
               element={
                 <Card
                   foods={foods.choices}
                   bowl={bowl}
                   setBowl={setBowl}
-                  // progress={progress}
-                  // setProgress={setProgress}
                   modalContent={modalContent}
                   setModalContent={setModalContent}
                   show={show}
@@ -101,7 +94,6 @@ function App() {
               <BowlPage
                 bowl={bowl}
                 setBowl={setBowl}
-                // setProgress={setProgress}
                 modalContent={modalContent}
                 setModalContent={setModalContent}
                 show={show}

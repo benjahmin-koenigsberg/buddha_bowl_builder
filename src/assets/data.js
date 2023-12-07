@@ -14,21 +14,21 @@ const foods = [
                 fat: 0.1,
                 protein: .9,
                 modalImg: 'https://www.znaturalfoods.com/cdn/shop/files/Spinach-Powder-Organic-Vegetable-Leaf-Grass-Powders-Z-Natural-Foods-3_900x.jpg?v=1685654572',
-                modalText: 'Spinach is yummy',
+                modalText: "It's is a very nutritious food that is a good source of vitamin K, C, A, E, and B- 6",
                 bowlImg: './images/spinach.png',
                 navTo: '/grains',
                 navBack: '/landing',
                 progress: 12.5,
             },
             {
-                name: 'Mixed Greens',
+                name: 'Mixed greens',
                 category: 'greens',
                 calories: '',
                 carbs: '',
                 fat: '',
                 protein: '',
                 modalImg: 'https://www.foodservicedirect.com/media/catalog/product/1/0/10684476048963.jpg?width=1200&height=1200&quality=85&fit=bounds',
-                modalText: 'Gotta love mixed greens',
+                modalText: 'Spring mix is a highly nutritious, low-calorie food that provides a high amount of vitamin A, vitamin K, folate, and manganese',
                 bowlImg: '',
 
             },
@@ -40,7 +40,7 @@ const foods = [
                 fat: '',
                 protein: '',
                 modalImg: 'https://www.brothersproducewholesale.com/cdn/shop/products/RomaineLettuce_grande.jpg?v=1584844186',
-                modalText: 'Yummy romaine',
+                modalText: "Romaine lettuce is packed with vitamin C, vitamin K, and folate. It's a good source of beta carotene, which converts into vitamin A in the body.",
                 bowlImg: '',
 
             },
@@ -120,19 +120,19 @@ const foods = [
                 carbs: '',
                 fat: '',
                 protein: '',
-                modalImg: 'https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/88bdc7d1a3927084-C_O_X3_F-zoom.jpg',
+                modalImg: 'https://w7.pngwing.com/pngs/27/997/png-transparent-dal-indian-cuisine-sambar-pigeon-pea-lentil-lentils-food-cooking-vegetables.png',
                 modalText: 'All-natural, raw organic chickpeas are also known as garbanzo beans. Use chickpeas to make healthy side dishes or homemade hummus. Adding chickpeas to salads and soups provides extra fiber and protein.',
                 bowlImg: '',
             },
             {
-                name: 'Black-eyed peas',
+                name: 'Lentils',
                 category: 'beans',
                 calories: '',
                 carbs: '',
                 fat: '',
                 protein: '',
                 modalImg: 'https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/7642_Black-Eyed+Peas-cuCt44Kb-zoom.jpg',
-                modalText: 'The black-eyed pea or black-eyed bean is a legume grown around the world for its medium-sized, edible bean. It is a subspecies of the cowpea, an Old World plant domesticated in Africa, and is sometimes simply called a cowpea.',
+                modalText: 'Lentils have been eaten for over 8,000 years and originated in Southwestern Masa along the Indus River. They are a staple food for many South Asian cultures. The Latin word for Lentil, Lens, was used in the 17th century to describe eye glasses because of the similarity in shape.',
                 bowlImg: '',
             },
         ]
@@ -142,7 +142,7 @@ const foods = [
         path: '/roots',
         choices: [
             {
-                name: 'Beet',
+                name: 'Beets',
                 category: 'roots',
                 calories: '',
                 carbs: '',
@@ -203,8 +203,22 @@ const foods = [
                 navTo: '/toppings',
 
             },
+            {
+                name: 'Vegan pesto',
+                category: 'dressing',
+                calories: '',
+                carbs: '',
+                fats: '',
+                protein: '',
+                modalImg: '',
+                modalText: "",
+                bowlImg: '',
+
+
+            },
         ]
     },
+
     {
         category: 'toppings',
         path: '/toppings',
@@ -253,15 +267,27 @@ const foods = [
 ]
 
 const bowlImages = {
-    Bowl: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894263/bowl_clavpl.png',
-    Spinach: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894264/Spinach_cedtt2.png',
-    Quinoa: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894264/Quinoa_serq0m.png',
-    "Black beans": 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894263/Black_beans_ihmjvs.png',
-    Beet: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894263/Beet_uczzwu.png',
-    Avacado: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701894263/Avacado_o0rdds.png'
+    Bowl: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701959307/bowl_zsntzm.png',
+    Spinach: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701962126/Spinach_qkwh7y.png',
+    Romaine: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965573/Romaine_j2yofp.png',
+    "Mixed greens": "https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965571/Mixed_greens_ab8w1y.png",
+    Quinoa: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965571/Quinoa_o3w4fi.png',
+    "Brown rice": 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965567/Brown_rice_zwjq0t.png',
+    Buckwheat: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701962126/Buckwheat_xuzsd3.png',
+    "Black beans": 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701962125/Black_beans_rwjqwz.png',
+    "Garbanzo beans": 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965568/Garbanzo_beans_pjtmmi.png',
+    Lentils: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965571/Lentils_v8mc5l.png',
+    Beets: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701962124/Beet_c2ebaf.png',
+    Yams: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965576/Yam_sh7p18.png',
+    Carrots: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965567/Carrot_uhlrso.png',
+    Avacado: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701962124/Avacado_jw0nbj.png',
+    "Flax seeds": 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965567/Flax_seeds_vpthvr.png',
+    Walnuts: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965575/Walnuts_yzzgsb.png',
+    "Vegan pesto": 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965575/Vegan_Pesto_le4kbx.png',
+    Tahini: 'https://res.cloudinary.com/dlqzrsajl/image/upload/v1701965573/Tahini_yu2ghz.png',
 
 
 
 }
 
-export {  foods, bowlImages }
+export { foods, bowlImages }

@@ -76,10 +76,9 @@ img {
   position: absolute;
   left: 0;
   bottom: 0;
+  transform: scale(1.1);
 }
 
 .black-beans {
-  width: 8rem;
-  left: 5.5rem;
-  bottom: 2rem;
+
 }
