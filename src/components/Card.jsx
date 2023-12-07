@@ -66,12 +66,13 @@ function Card({
                     }}
                   />
                   <div
-                    className="text-center"
+                    className="text-center bg-info rounded-circle button"
+                    style={{ boxShadow: "-1px 3px 3px 0px" }}
                     type="button"
                     onClick={() => {
                       bowl[food.category] ? handleShow() : "";
                     }}>
-                    ℹ️
+                    ❔
                   </div>
                 </div>
               </div>
@@ -83,7 +84,6 @@ function Card({
         <button
           className="btn btn-dark mt-5"
           onClick={() => {
-
             setBowl({ ...bowl, progress: bowl.progress - 12.5 });
             navigate(foods[0].navBack);
             // history.back();

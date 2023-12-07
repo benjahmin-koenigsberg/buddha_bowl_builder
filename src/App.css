@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 
 #root {
   max-width: 1280px;
@@ -22,6 +28,7 @@ body {
   /* flex-direction: column; */
   /* justify-content: space-between; */
   background-image: url('./assets/bg.jpeg');
+  /* background-image: url('https: //res.cloudinary.com/dlqzrsajl/image/upload/v1701976029/bg_y4ek4v.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -29,22 +36,13 @@ body {
 }
 
 
-
-
-/* header {
-  height: 10vh;
-} */
-/* .main {
-  height: 70vh;
-} */
-
-.main {
-  /* width: 50vw; */
-  /* height: 70vh; */
-  /* height: calc(var(--vh, 1vh) * 70); */
-
+.card, button {
+  box-shadow: -1px 4px 5px 0px;
 }
 
+.button:actve, button:active{
+  transform: translate(5%, 5%);
+}
 
 
 .parent {
