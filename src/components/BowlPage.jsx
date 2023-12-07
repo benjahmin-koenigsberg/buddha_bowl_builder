@@ -27,14 +27,14 @@ const navigate = useNavigate()
       <div className="card">
         {/* <h5 className="card-title">Buddah Bowl</h5> */}
         <div className="card-body">
-          <div className="parent">
-            <img src={bowlImages.Bowl} className="z-0" />
-            <img className="food" src={bowlImages[bowl.greens]} />
-            <img className="food" src={bowlImages[bowl.grains]} />
-            <img className="food" src={bowlImages[bowl.beans]} />
-            <img className="food" src={bowlImages[bowl.roots]} />
-            <img className="food" src={bowlImages[bowl.toppings]} />
-            <img className="food" src={bowlImages[bowl.dressing]} />
+          <div className="parent m-auto">
+            <img src={bowlImages.Bowl} className="" />
+            <img className="food " src={bowlImages[bowl.greens]} />
+            <img className="food " src={bowlImages[bowl.grains]} />
+            <img className="food " src={bowlImages[bowl.beans]} />
+            <img className="food " src={bowlImages[bowl.roots]} />
+            <img className="food " src={bowlImages[bowl.toppings]} />
+            <img className="food " src={bowlImages[bowl.dressing]} />
           </div>
           <p className="card-text"></p>
           <button className="btn btn-dark" onClick={handleShow}>

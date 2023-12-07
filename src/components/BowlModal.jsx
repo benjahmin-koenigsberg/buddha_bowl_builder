@@ -1,8 +1,10 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Table from "./Table";
-import html2canvas from "html2canvas";
-import downloadjs from "downloadjs";
+// import html2canvas from "html2canvas";
+// import downloadjs from "downloadjs";
+import * as htmlToImage from "html-to-image";
+
 import BowlTable from './BowlTable'
 
 
@@ -11,11 +13,17 @@ function BowlModal({ show, handleClose, modalContent, bowl, bowlImages }) {
 
 const handleCapture = async () => {
 
-  const canvas = await html2canvas(document.getElementById("bowlImg"));
-  const dataURL = canvas.toDataURL("image/png");
-  downloadjs(dataURL, "My Buddah Bowl.png", "image/png");
 
-}
+    const dataUrl = await htmlToImage.toPng(document.getElementById('bowlImg'));
+
+    // download image
+    const link = document.createElement('a');
+    link.download = "my-buddah-bowl.png";
+    link.href = dataUrl;
+    link.click();
+    };
+
+
 
 
 

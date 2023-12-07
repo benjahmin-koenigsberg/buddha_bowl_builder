@@ -50,8 +50,13 @@ body {
 
 }
 
-img {
-  max-width: 20rem;
+ .parent  img {
+  width: 20rem;
+  margin: auto;
+}
+
+#bowlImg img {
+  width: 30rem;
 }
 
 
@@ -59,5 +64,5 @@ img {
   position: absolute;
   left: 0;
   bottom: .5rem;
-  transform: scale(1.11);
+  transform: scale(1.1);
 }
