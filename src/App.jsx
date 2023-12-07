@@ -57,13 +57,10 @@ function App() {
   useEffect(()=>{},[window.location.pathname])
 
   return (
-    <BrowserRouter>
-      {/* <Header progress={progress}  /> */}
+    <BrowserRouter >
       <Header progress={bowl.progress} />
-
       <div className="main container">
         <Routes>
-          {/* <Route path="/" element={<LandingPage setProgress={setProgress} />} /> */}
           <Route
             path="/"
             element={<LandingPage setBowl={setBowl} bowl={bowl} />}

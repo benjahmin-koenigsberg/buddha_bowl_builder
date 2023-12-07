@@ -1,7 +1,8 @@
-import Button from 'react-bootstrap/Button'
+/** @format */
 
-function FoodItem({food, setModalContent, bowl, setBowl, modalContent }) {
+import Button from "react-bootstrap/Button";
 
+function FoodItem({ food, setModalContent, bowl, setBowl, modalContent }) {
   return (
     <>
       <form className="d-flex flex-row justify-content-evenly">
@@ -29,13 +30,17 @@ function FoodItem({food, setModalContent, bowl, setBowl, modalContent }) {
                 });
               }}
             />
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="dark" onClick={handleShow}>
               Launch demo modal
             </Button>
           </div>
         </div>
       </form>
-      <ModalComponent show={show} handleClose={handleClose} modalContent={modalContent} />
+      <ModalComponent
+        show={show}
+        handleClose={handleClose}
+        modalContent={modalContent}
+      />
     </>
   );
 }

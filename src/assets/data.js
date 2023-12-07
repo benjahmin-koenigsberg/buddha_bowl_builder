@@ -6,7 +6,7 @@ const foods = [
         path: '/greens',
         choices: [
             {
-                mainText: '',
+                mainText: 'As a good rule of thumb always start with greens at the base of your bowl. This will allow the greens to condense or slightly wilt when the other toppings are added to the bowl.',
                 category: 'greens',
                 name: 'Spinach',
                 calories: 7,
@@ -17,8 +17,10 @@ const foods = [
                 modalText: "It's is a very nutritious food that is a good source of vitamin K, C, A, E, and B- 6",
                 bowlImg: './images/spinach.png',
                 navTo: '/grains',
-                navBack: '/landing',
+                navBack: '/',
                 progress: 12.5,
+                emoji: '🥬',
+
             },
             {
                 name: 'Mixed greens',
@@ -53,7 +55,7 @@ const foods = [
         choices: [
             {
                 path: '/grains',
-                mainText: '',
+                mainText: 'Add a whole grain of your liking',
                 category: 'grains',
                 name: 'Quinoa',
                 calories: 120,
@@ -66,10 +68,12 @@ const foods = [
                 navTo: '/beans',
                 navBack: '/greens',
                 progress: 25,
+                emoji: '🌾',
+
 
             },
             {
-                name: 'Brown Rice',
+                name: 'Brown rice',
                 category: 'grains',
                 calories: '',
                 carbs: '',
@@ -99,7 +103,7 @@ const foods = [
         choices: [
             {
                 path: '/beans',
-                mainText: '',
+                mainText: 'Add in a protein-rich lugume',
                 category: 'beans',
                 name: 'Black beans',
                 calories: '',
@@ -112,6 +116,8 @@ const foods = [
                 navTo: '/roots',
                 navBack: '/grains',
                 progress: 37.5,
+                emoji: '🫘',
+
             },
             {
                 name: 'Garbanzo beans',
@@ -144,6 +150,7 @@ const foods = [
             {
                 name: 'Beets',
                 category: 'roots',
+                mainText: 'Increases the nutrients and vitamins',
                 calories: '',
                 carbs: '',
                 fat: '',
@@ -154,11 +161,12 @@ const foods = [
                 navTo: '/dressing',
                 navBack: '/beans',
                 progress: 50,
+                emoji: '🍠',
+
 
             },
             {
                 path: '/roots',
-                mainText: '',
                 name: 'Yams',
                 category: 'roots',
                 calories: '',
@@ -191,16 +199,19 @@ const foods = [
         choices: [
             {
                 name: 'Tahini',
+                mainText: 'One key to a great bowl is having a sauce or dressing!',
                 category: 'dressing',
                 calories: '',
                 carbs: '',
                 fats: '',
                 protein: '',
-                modalImg: '',
-                modalText: "",
+                modalImg: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/02/tahini-a2a3069.jpg?quality=90&resize=556,505',
+                modalText: "Tahini or tahina is a Middle Eastern condiment made from toasted ground hulled sesame. It is served by itself or as a major ingredient in hummus, baba ghanoush, and halva",
                 bowlImg: '',
                 progress: 62.5,
                 navTo: '/toppings',
+                emoji: '🍶',
+
 
             },
             {
@@ -210,8 +221,8 @@ const foods = [
                 carbs: '',
                 fats: '',
                 protein: '',
-                modalImg: '',
-                modalText: "",
+                modalImg: 'https://sweetsimplevegan.com/wp-content/uploads/2021/03/Bowl-Pesto-Sweet-Simple-Vegan-2.jpg',
+                modalText: "Vegan pesto is bright and flavorful, thanks to fresh basil, garlic, pine nuts and lemon juice",
                 bowlImg: '',
 
 
@@ -224,7 +235,7 @@ const foods = [
         path: '/toppings',
         choices: [
             {
-                mainText: '',
+                mainText: 'Lastly, add some fatty plants to help absorb all the nutrients from everything else in the bowl',
                 name: 'Avacado',
                 category: 'toppings',
                 calories: '',
@@ -237,6 +248,8 @@ const foods = [
                 navTo: '/bowl',
                 navBack: '/roots',
                 progress: '75',
+                emoji: '🌰',
+
 
             },
             {

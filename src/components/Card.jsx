@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import ModalComponent from "./ModalComponent";
 import Button from "react-bootstrap/Button";
 
-
 function Card({
   foods,
   bowl,
@@ -20,15 +19,14 @@ function Card({
 }) {
   const navigate = useNavigate();
 
-
   return (
     <>
       {/* <div className={`main`}> */}
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">{`Choose your ${foods[0].category}`}</h5>
-          <p className="card-text">Some quick example text</p>
-
+          <p className="card-text display-1">{foods[0].emoji}</p>
+          <p className="card-text">{foods[0].mainText}</p>
           <form className="d-flex flex-row justify-content-evenly">
             {foods.map((food, index) => (
               <div key={index}>
@@ -83,10 +81,9 @@ function Card({
       </div>
       <div className="d-flex flex-row justify-content-between">
         <button
-          className="btn btn-primary mt-5"
+          className="btn btn-dark mt-5"
           onClick={() => {
-            // setProgress((prev) => prev - 12.5);
-            // setBowl({...bowl,
+
             setBowl({ ...bowl, progress: bowl.progress - 12.5 });
             navigate(foods[0].navBack);
             // history.back();
@@ -94,10 +91,9 @@ function Card({
           ◀️ Back
         </button>
         <button
-          className="btn btn-primary mt-5"
+          className="btn btn-dark mt-5"
           onClick={() => {
             bowl[foods[0].category] ? navigate(foods[0].navTo) : "";
-            // bowl[foods[0].category] ? navigate(`/${i+1}`) : "";
           }}>
           {foods[0].navTo.slice(1)} ▶️
         </button>

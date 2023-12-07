@@ -1,25 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 
 #root {
   max-width: 1280px;
+  height: 100vh;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: monospace; */
+  /* height: calc(var(--vh, 1vh) * 100); */
+  font-size: calc(60% + 1.2vmin);
+
 }
 
 
 
-html , body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: calc(var(--vh, 1vh) * 100);
-  font-size: calc(60% + 1.2vmin);
+html,
+body {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  background-image: url('./assets/bg.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+
 }
+
 
 
 
@@ -32,37 +40,14 @@ html , body {
 
 .main {
   /* width: 50vw; */
-  height: 70vh;
-  height: calc(var(--vh, 1vh) * 70);
+  /* height: 70vh; */
+  /* height: calc(var(--vh, 1vh) * 70); */
 
 }
 
-/* footer {
-  height: 5vh;
-} */
-
-/* .all-bg{
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-} */
 
 
-.greens {
-  background-image: url('https://images.pexels.com/photos/319798/pexels-photo-319798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-}
-
-.grains {
-  background-image: url("https://images.pexels.com/photos/4110250/pexels-photo-4110250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
-
-.beans {
-  background-image: url('https://www.eatthis.com/wp-content/uploads/sites/4/2020/03/variety-of-beans.jpg?quality=82&strip=1')
-}
-
-
-
-.parent{
+.parent {
   position: relative;
 
 }
@@ -75,10 +60,6 @@ img {
 .food {
   position: absolute;
   left: 0;
-  bottom: 0;
-  transform: scale(1.1);
-}
-
-.black-beans {
-
+  bottom: .5rem;
+  transform: scale(1.11);
 }

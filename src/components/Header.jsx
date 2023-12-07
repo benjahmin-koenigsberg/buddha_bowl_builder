@@ -3,10 +3,10 @@ function Header({progress}) {
 
   return (
     <header className="mb-4">
-      <h1 className="display-5">Buddah Bowl Builder</h1>
+      <h1 className="display-6 text-light">Buddah Bowl Builder</h1>
       <div className="progress">
         <div
-          className="progress-bar"
+          className="progress-bar bg-success"
           role="progressbar"
           aria-valuenow={progress}
           aria-valuemin="0"

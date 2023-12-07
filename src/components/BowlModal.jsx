@@ -22,11 +22,11 @@ const handleCapture = async () => {
   return (
     <>
       <Modal show={show} onHide={() => handleClose()}>
-        <Modal.Header closeButton>
-          <Modal.Title>Buddah Bowl</Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="text-center"></Modal.Body>
-        <div className="parent m-auto z-0" id="bowlImg">
+        {/* <Modal.Header closeButton>
+          <Modal.Title>My Buddah Bowl</Modal.Title>
+        </Modal.Header> */}
+        <Modal.Body className="text-center"> </Modal.Body>
+        <div className="parent m-auto  mb-4" id="bowlImg">
           <img src={bowlImages.Bowl} className="" />
           <img className="food" src={bowlImages[bowl.greens]} />
           <img className="food" src={bowlImages[bowl.grains]} />
@@ -35,7 +35,8 @@ const handleCapture = async () => {
           <img className="food" src={bowlImages[bowl.toppings]} />
           <img className="food" src={bowlImages[bowl.dressing]} />
         </div>
-        <BowlTable bowl={bowl} />
+
+        <BowlTable bowl={bowl} className="mt-4" />
 
         <Modal.Footer className="m-auto">
           <Button variant="secondary" onClick={() => handleClose()}>
