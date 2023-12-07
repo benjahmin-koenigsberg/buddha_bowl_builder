@@ -57,9 +57,9 @@ function App() {
   useEffect(()=>{},[window.location.pathname])
 
   return (
-    <BrowserRouter >
+    <BrowserRouter className=''>
       <Header progress={bowl.progress} />
-      <div className="main container">
+      <div className="">
         <Routes>
           <Route
             path="/"

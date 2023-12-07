@@ -15,7 +15,6 @@
   text-align: center;
   font-family: 'Poppins', sans-serif;
   /* font-family: monospace; */
-  /* height: calc(var(--vh, 1vh) * 100); */
   font-size: calc(60% + 1.2vmin);
 
 }
@@ -35,6 +34,11 @@ body {
 
 }
 
+.main {
+    /* width: 50vw;
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50); */
+}
 
 .card, button {
   box-shadow: -1px 4px 5px 0px;
@@ -56,7 +60,7 @@ body {
 }
 
 #bowlImg img {
-  width: 30rem;
+  width: 25rem;
 }
 
 
@@ -65,4 +69,16 @@ body {
   left: 0;
   bottom: .5rem;
   transform: scale(1.1);
+}
+
+/* @media screen and (min-width:320px) and (max-width:640px) {
+#root {
+    height: 100vh;
+  }
+} */
+
+@media screen and (max-height:658px)  {
+  #root{
+   height: 100vh;
+  }
 }
