@@ -71,11 +71,11 @@ body {
   transform: scale(1.1);
 }
 
-/* @media screen and (min-width:320px) and (max-width:640px) {
+@media screen and (min-width:320px) and (max-width:640px) {
 #root {
-    height: 100vh;
+    width: 100vh;
   }
-} */
+}
 
 @media screen and (max-height:658px)  {
   #root{
