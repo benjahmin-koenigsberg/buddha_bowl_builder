@@ -4,25 +4,21 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: calc(60% + 1.5vmin);
 }
 
 
-#root {
-  max-width: 1280px;
-  height: 100vh;
+
+
+
+
+body {
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  /* font-family: monospace; */
-  font-size: calc(60% + 1.2vmin);
-
-}
-
-
-
-html,
-body {
+  max-width: 1280px;
+  max-height: 100vh;
   /* display: flex; */
   /* flex-direction: column; */
   /* justify-content: space-between; */
@@ -31,20 +27,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  /* font-size: calc(60% + 1.2vmin); */
 
 }
 
-.main {
-    /* width: 50vw;
-    height: 50vh;
-    height: calc(var(--vh, 1vh) * 50); */
-}
 
-.card, button {
+
+.card,
+button {
   box-shadow: -1px 4px 5px 0px;
 }
 
-.button:actve, button:active{
+.button:actve,
+button:active {
   transform: translate(5%, 5%);
 }
 
@@ -54,7 +49,7 @@ body {
 
 }
 
- .parent  img {
+.parent img {
   width: 20rem;
   margin: auto;
 }
@@ -72,13 +67,13 @@ body {
 }
 
 @media screen and (min-width:320px) and (max-width:640px) {
-#root {
+  #root {
     width: 100vh;
   }
 }
 
-@media screen and (max-height:658px)  {
-  #root{
-   height: 100vh;
+@media screen and (max-height:658px) {
+  #root {
+    height: 100vh;
   }
 }
