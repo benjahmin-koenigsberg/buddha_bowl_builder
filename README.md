@@ -37,4 +37,4 @@ https://buddah-bowl-builder.vercel.app/
 4. Start the development server: `npm start`
 5. Open your browser and visit `http://localhost:3000`
 
-## Project Structure
+
