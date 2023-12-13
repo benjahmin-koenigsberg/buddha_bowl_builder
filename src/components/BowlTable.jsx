@@ -11,7 +11,7 @@ function BowlTable({ bowl }) {
       </thead>
       <tbody>
         <tr>
-          <td>{bowl.calories}</td>
+          <td>{bowl.calories.toFixed(2)}</td>
           <td>{bowl.carbs}</td>
           <td>{bowl.fat}</td>
           <td>{bowl.protein}</td>

@@ -23,11 +23,11 @@ function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl
     // const protien = nutrients.find(
     //   (nutrient) => nutrient.nutrientName === "Protein"
     // ).value;
-    const protien = nutrients.find((nutrient) =>
+    const protien = nutrients.find(( nutrient) =>
       nutrient.nutrientName.includes("Protein" || "protein")
     ).value;
     const carbs = nutrients.find((nutrient) =>
-      nutrient.nutrientName.includes("Carbohydrate")
+      nutrient.nutrientName.includes("Carbohydrate" || 'carbohydrate')
     ).value;
     const fat = nutrients.find((nutrient) =>
       nutrient.nutrientName.includes("lipid" || "fat")
