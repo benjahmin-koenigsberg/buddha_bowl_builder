@@ -12,9 +12,9 @@ function Table({modalContent}) {
       <tbody>
         <tr>
           <td>{modalContent.calories}</td>
-          <td>{modalContent.carbs}</td>
-          <td>{modalContent.fat}</td>
-          <td>{modalContent.protein}</td>
+          <td>{modalContent.carbs}g</td>
+          <td>{modalContent.fat}g</td>
+          <td>{modalContent.protein}g</td>
         </tr>
       </tbody>
     </table>
