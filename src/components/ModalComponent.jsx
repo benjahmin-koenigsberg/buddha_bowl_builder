@@ -24,14 +24,14 @@ function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl
     //   (nutrient) => nutrient.nutrientName === "Protein"
     // ).value;
     const protien = nutrients.find(( nutrient) =>
-      nutrient.nutrientName.includes("Protein" || "protein")
-    ).value;
+      nutrient.nutrientName.includes('Protein' || 'protien')
+    )?.value;
     const carbs = nutrients.find((nutrient) =>
-      nutrient.nutrientName.includes("Carbohydrate" || 'carbohydrate')
-    ).value;
+      nutrient.nutrientName.includes('Carbohydrate' || 'carbohydrate')
+    )?.value;
     const fat = nutrients.find((nutrient) =>
-      nutrient.nutrientName.includes("lipid" || "fat")
-    ).value;
+      nutrient.nutrientName.includes("lipid" || "fat" || "Total lipid")
+    )?.value;
     const calories = carbs * 4 + fat * 9 + protien * 4;
 
     setModalContent({
@@ -51,12 +51,12 @@ function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl
     });
 
 
-    //console.log(nutrients);
+    console.log(nutrients);
   }
 
   useEffect(() => {
     getNutrients();
-  }, [] );
+  }, []);
 
   return (
     <>
