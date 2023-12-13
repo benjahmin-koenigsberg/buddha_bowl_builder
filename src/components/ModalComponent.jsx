@@ -12,7 +12,6 @@ function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl
     const api_key = import.meta.env.VITE_API_KEY;
     const query = modalContent.name;
 
-    // const fruitTextUrl = `https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${api_key}&query=${e.target.value}`
     const fruitTextUrl = `https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${api_key}&query=${query}`;
 
     const response = await axios.get(fruitTextUrl);
@@ -52,8 +51,7 @@ function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl
     });
 
 
-    console.log(nutrients);
-    //console.log(fat)
+    //console.log(nutrients);
   }
 
   useEffect(() => {

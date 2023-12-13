@@ -15,6 +15,7 @@ Welcome to the Buddha Bowl Builder repository! This is a web application for cre
   - React: A JavaScript library for building user interfaces.
   - Bootstrap: Stylish and responsive UI components powered by Bootstrap.
   - html-to-image ✂️ Generates an image from a DOM node using HTML5 canvas and SVG.
+  - USDA Food Data Central API https://fdc.nal.usda.gov/api-guide.html
 
 ### Live site
 
@@ -36,5 +37,3 @@ https://buddah-bowl-builder.vercel.app/
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
 5. Open your browser and visit `http://localhost:3000`
-
-
