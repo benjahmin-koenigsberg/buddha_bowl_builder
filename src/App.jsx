@@ -11,21 +11,6 @@ import LandingPage from "./components/LandingPage";
 import BowlPage from "./components/BowlPage";
 
 function App() {
-  //functions
-  const resizeOps = () => {
-    document.documentElement.style.setProperty(
-      "--vh",
-      window.innerHeight * 0.01 + "px"
-    );
-  };
-
-  resizeOps();
-
-  window.addEventListener("resize", resizeOps);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
   const [bowl, setBowl] = useState({
     greens: "",
     grains: "",
@@ -52,12 +37,25 @@ function App() {
 
   const [show, setShow] = useState(false);
 
+  useEffect(() => {}, [window.location.pathname]);
 
+  //functions
+  const resizeOps = () => {
+    document.documentElement.style.setProperty(
+      "--vh",
+      window.innerHeight * 0.01 + "px"
+    );
+  };
 
-  useEffect(()=>{},[window.location.pathname])
+  resizeOps();
+
+  window.addEventListener("resize", resizeOps);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
-    <BrowserRouter className=''>
+    <BrowserRouter className="">
       <Header progress={bowl.progress} />
       <div className="">
         <Routes>
@@ -98,6 +96,10 @@ function App() {
                 handleShow={handleShow}
               />
             }
+          />
+          <Route
+            path="*"
+            element={<LandingPage setBowl={setBowl} bowl={bowl} />}
           />
         </Routes>
       </div>
