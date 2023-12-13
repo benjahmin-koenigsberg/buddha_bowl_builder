@@ -58,10 +58,10 @@ function Card({
                         name: food.name,
                         text: food.modalText,
                         img: food.modalImg,
-                        calories: food.calories,
-                        carbs: food.carbs,
-                        fat: food.fat,
-                        protien: food.protein,
+                        // calories: food.calories,
+                        // carbs: food.carbs,
+                        // fat: food.fat,
+                        // protien: food.protein,
                       });
                     }}
                   />
@@ -103,6 +103,9 @@ function Card({
         modalContent={modalContent}
         show={show}
         handleClose={handleClose}
+        setModalContent={setModalContent}
+        bowl={bowl}
+        setBowl={setBowl}
       />
       {/* </div> */}
     </>

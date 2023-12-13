@@ -1,9 +1,64 @@
+/** @format */
+
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Table from "./Table";
+import axios from "axios";
+import { useEffect } from "react";
 
-function ModalComponent({ show, modalContent, handleClose }) {
+function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl, setBowl }) {
+  async function getNutrients() {
 
+    const api_key = import.meta.env.VITE_API_KEY;
+    const query = modalContent.name;
+
+    // const fruitTextUrl = `https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${api_key}&query=${e.target.value}`
+    const fruitTextUrl = `https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${api_key}&query=${query}`;
+
+    const response = await axios.get(fruitTextUrl);
+    const data = await response.data;
+
+    //console.log(data)
+    //const nutrients = data.foods[0]
+    const nutrients = data.foods[0].foodNutrients;
+    // const protien = nutrients.find(
+    //   (nutrient) => nutrient.nutrientName === "Protein"
+    // ).value;
+    const protien = nutrients.find((nutrient) =>
+      nutrient.nutrientName.includes("Protein" || "protein")
+    ).value;
+    const carbs = nutrients.find((nutrient) =>
+      nutrient.nutrientName.includes("Carbohydrate")
+    ).value;
+    const fat = nutrients.find((nutrient) =>
+      nutrient.nutrientName.includes("lipid" || "fat")
+    ).value;
+    const calories = carbs * 4 + fat * 9 + protien * 4;
+
+    setModalContent({
+      ...modalContent,
+      calories: calories.toFixed(2),
+      carbs: carbs,
+      fat: fat,
+      protien: protien,
+    });
+
+    setBowl({
+      ...bowl,
+      calories: bowl.calories + calories,
+      carbs: bowl.carbs + carbs,
+      fat: bowl.fat + fat,
+      protein: bowl.protein + protien,
+    });
+
+
+    console.log(nutrients);
+    //console.log(fat)
+  }
+
+  useEffect(() => {
+    getNutrients();
+  }, [] );
 
   return (
     <>
