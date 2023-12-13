@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalComponent from "./ModalComponent";
 import Button from "react-bootstrap/Button";
+import axios from 'axios'
 
 function Card({
   foods,
@@ -18,6 +19,9 @@ function Card({
   handleShow,
 }) {
   const navigate = useNavigate();
+
+
+
 
   return (
     <>
@@ -42,6 +46,8 @@ function Card({
                     value={food.name}
                     checked={bowl[`${food.category}`] === food.name}
                     onChange={(e) => {
+
+
                       setBowl({
                         ...bowl,
                         [`${food.category}`]: e.target.value,
@@ -55,6 +61,7 @@ function Card({
                       //localStorage.setItem("bowl", JSON.stringify(bowl));
 
                       setModalContent({
+                        ...modalContent,
                         name: food.name,
                         text: food.modalText,
                         img: food.modalImg,
@@ -63,6 +70,7 @@ function Card({
                         // fat: food.fat,
                         // protien: food.protein,
                       });
+
                     }}
                   />
                   <div
@@ -85,8 +93,8 @@ function Card({
           className="btn btn-dark mt-5"
           onClick={() => {
             setBowl({ ...bowl, progress: bowl.progress - 12.5 });
-            navigate(foods[0].navBack);
-            // history.back();
+           // navigate(foods[0].navBack);
+             history.back();
           }}>
           ◀️ Back
         </button>

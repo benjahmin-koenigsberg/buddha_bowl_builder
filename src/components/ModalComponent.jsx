@@ -7,6 +7,8 @@ import axios from "axios";
 import { useEffect } from "react";
 
 function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl, setBowl }) {
+
+
   async function getNutrients() {
 
     const api_key = import.meta.env.VITE_API_KEY;
@@ -20,11 +22,9 @@ function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl
     //console.log(data)
     //const nutrients = data.foods[0]
     const nutrients = data.foods[0].foodNutrients;
-    // const protien = nutrients.find(
-    //   (nutrient) => nutrient.nutrientName === "Protein"
-    // ).value;
-    const protien = nutrients.find(( nutrient) =>
-      nutrient.nutrientName.includes('Protein' || 'protien')
+    // const protein = nutrients.filter((nutrient) => nutrient.nutrientName === 'Protein').value;
+    const protein = nutrients.find(( nutrient) =>
+      nutrient.nutrientName.includes( 'Protein' || 'protein')
     )?.value;
     const carbs = nutrients.find((nutrient) =>
       nutrient.nutrientName.includes('Carbohydrate' || 'carbohydrate')
@@ -32,14 +32,14 @@ function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl
     const fat = nutrients.find((nutrient) =>
       nutrient.nutrientName.includes("lipid" || "fat" || "Total lipid")
     )?.value;
-    const calories = carbs * 4 + fat * 9 + protien * 4;
+    const calories = carbs * 4 + fat * 9 + protein * 4;
 
     setModalContent({
       ...modalContent,
       calories: calories.toFixed(2),
       carbs: carbs,
       fat: fat,
-      protien: protien,
+      protein: protein,
     });
 
     setBowl({
@@ -47,16 +47,22 @@ function ModalComponent({ show, modalContent, setModalContent, handleClose, bowl
       calories: bowl.calories + calories,
       carbs: bowl.carbs + carbs,
       fat: bowl.fat + fat,
-      protein: bowl.protein + protien,
+      protein: bowl.protein + protein,
     });
 
 
     console.log(nutrients);
   }
 
+
+  //getNutrients()
+
   useEffect(() => {
-    getNutrients();
-  }, []);
+
+
+    getNutrients()
+
+  }, [modalContent.name] );
 
   return (
     <>

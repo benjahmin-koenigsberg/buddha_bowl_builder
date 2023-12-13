@@ -12,9 +12,9 @@ function BowlTable({ bowl }) {
       <tbody>
         <tr>
           <td>{bowl.calories.toFixed(2)}</td>
-          <td>{bowl.carbs}g</td>
-          <td>{bowl.fat}g</td>
-          <td>{bowl.protein}g</td>
+          <td>{bowl.carbs.toFixed(2)}g</td>
+          <td>{bowl.fat.toFixed(2)}g</td>
+          <td>{bowl.protein.toFixed(2)}g</td>
         </tr>
       </tbody>
     </table>
