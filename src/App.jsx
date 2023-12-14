@@ -73,7 +73,7 @@ function App() {
           {foods.map((foods, i) => (
             <Route
               key={i}
-              path={`${foods.path}`}
+              path={`${foods?.path}`}
               element={
                 <Card
                   foods={foods.choices}
