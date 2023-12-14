@@ -6,7 +6,7 @@ Welcome to the Buddha Bowl Builder repository! This is a web application for cre
 
 - **Ingredient Selection:** Choose from a diverse range of ingredients, including grains, proteins, vegetables, and dressings.
 - **Customization:** Mix and match ingredients to create your perfect bowl combination.
-- **Nutritional Information:** View the nutritional details of your Buddha bowl for a healthier meal planning experience.
+- **Nutritional Information:** Using the USDA Food API, view the nutritional details of your Buddha bowl for a healthier meal planning experience.
 - **User-Friendly Interface:** Intuitive design for a seamless and enjoyable user experience.
 - **Download a .png of your finished bowl!!
 
