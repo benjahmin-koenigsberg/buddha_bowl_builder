@@ -1,7 +1,7 @@
 /** @format */
 
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { foods } from "./assets/data";
@@ -37,6 +37,12 @@ function App() {
 
   const [show, setShow] = useState(false);
 
+
+  const bgImage = useRef();
+  console.log(bgImage.current);
+  // bgImage.current.backgroundImage = 'url(https://www.eatthis.com/wp-content/uploads/sites/4/2020/03/variety-of-beans.jpg?quality=82&strip=1)'
+  //bgImage.current.style.fontFamily = "monospace";
+
   useEffect(() => {}, [window.location.pathname]);
 
   //functions
@@ -55,9 +61,9 @@ function App() {
   const handleShow = () => setShow(true);
 
   return (
-    <BrowserRouter className="">
+    <BrowserRouter >
       <Header progress={bowl.progress} />
-      <div className="">
+      <div id="bg">
         <Routes>
           <Route
             path="/"

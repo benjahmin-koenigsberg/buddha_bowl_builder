@@ -78,3 +78,15 @@ button:active {
     height: 100vh;
   }
 } */
+
+.greens {
+  background-image: url('https://images.pexels.com/photos/319798/pexels-photo-319798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.grains {
+  background-image: url("https://images.pexels.com/photos/4110250/pexels-photo-4110250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.beans {
+  background-image: url('https://www.eatthis.com/wp-content/uploads/sites/4/2020/03/variety-of-beans.jpg?quality=82&strip=1')
+}

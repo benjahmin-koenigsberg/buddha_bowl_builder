@@ -23,12 +23,25 @@ https://buddah-bowl-builder.vercel.app/
 
 ### Screen shots
 
-![Alt text](<Screen Shot 2023-12-11 at 5.22.20 PM.png>)
+Miro Board /Wire frame ⏬
 
-![Alt text](<Screen Shot 2023-12-11 at 5.22.40 PM.png>)
+![Wire frame of app](<src/assets/Plant Based Plate Builder.jpeg>)
 
-![Alt text](<Screen Shot 2023-12-11 at 5.23.05 PM.png>)
+Landing page ⏬
 
+![landing page screen shot](<src/assets/Screen Shot 2023-12-14 at 9.28.34 AM.png>)
+
+Choose your 'greens' option ⏬
+
+![Choose your greens](<src/assets/Screen Shot 2023-12-14 at 9.28.43 AM.png>)
+
+Each item has a detail modal ⏬
+
+![Details of each item modal](<src/assets/Screen Shot 2023-12-14 at 9.29.05 AM.png>)
+
+Final result, your budda bowl. Click 'Downlaod' to save a **.png** of your creation to our co,puter or phone
+
+![Final screen and photo canvas](<src/assets/Screen Shot 2023-12-14 at 9.29.44 AM.png>)
 
 ## Getting Started
 
