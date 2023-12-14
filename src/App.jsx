@@ -61,7 +61,7 @@ function App() {
   const handleShow = () => setShow(true);
 
   return (
-    <BrowserRouter >
+    <BrowserRouter>
       <Header progress={bowl.progress} />
       <div id="bg">
         <Routes>
@@ -73,7 +73,8 @@ function App() {
           {foods.map((foods, i) => (
             <Route
               key={i}
-              path={`${foods?.path}`}
+              // path={`${foods?.path}`}
+              path={`${foods.path ? foods.path : '/'}`}
               element={
                 <Card
                   foods={foods.choices}
