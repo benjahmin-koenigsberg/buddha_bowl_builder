@@ -101,7 +101,7 @@ function Card({
         <button
           className="btn btn-dark mt-5"
           onClick={() => {
-            bowl[foods[0].category] ? navigate(foods[0].navTo) : "";
+            bowl[foods[0].category] ? navigate(foods[0].navTo) ? navigate(foods[0].navTo) : '/' : "";
           }}>
           {foods[0].navTo.slice(1)} ▶️
         </button>
