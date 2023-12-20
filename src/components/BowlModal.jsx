@@ -1,3 +1,5 @@
+/** @format */
+
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Table from "./Table";
@@ -5,33 +7,24 @@ import Table from "./Table";
 // import downloadjs from "downloadjs";
 import * as htmlToImage from "html-to-image";
 
-import BowlTable from './BowlTable'
-
+import BowlTable from "./BowlTable";
 
 function BowlModal({ show, handleClose, modalContent, bowl, bowlImages }) {
-
-
-const handleCapture = async () => {
-
-
-    const dataUrl = await htmlToImage.toPng(document.getElementById('bowlImg'));
+  const handleCapture = async () => {
+    const dataUrl = await htmlToImage.toPng(document.getElementById("bowlImg"));
 
     // download image
-    const link = document.createElement('a');
-    link.download = "my-buddah-bowl.png";
+    const link = document.createElement("a");
+    link.download = "my-Buddha-bowl.png";
     link.href = dataUrl;
     link.click();
-    };
-
-
-
-
+  };
 
   return (
     <>
       <Modal show={show} onHide={() => handleClose()}>
         {/* <Modal.Header closeButton>
-          <Modal.Title>My Buddah Bowl</Modal.Title>
+          <Modal.Title>My Buddha Bowl</Modal.Title>
         </Modal.Header> */}
         <Modal.Body className="text-center"> </Modal.Body>
         <div className="parent m-auto  mb-4" id="bowlImg">

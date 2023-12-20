@@ -1,3 +1,5 @@
+/** @format */
+
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalComponent from "./ModalComponent";
@@ -20,12 +22,12 @@ function BowlPage({
     setBowl({ ...bowl, progress: 100 });
   }, []);
 
-const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
       <div className="card">
-        {/* <h5 className="card-title">Buddah Bowl</h5> */}
+        {/* <h5 className="card-title">Buddha Bowl</h5> */}
         <div className="card-body">
           <div className="parent m-auto">
             <img src={bowlImages.Bowl} className="" />
@@ -41,7 +43,6 @@ const navigate = useNavigate()
             Details
           </button>
         </div>
-
       </div>
 
       <BowlModal
